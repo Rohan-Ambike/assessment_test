@@ -55,44 +55,82 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            border: 1px solid #000;
+            /* border: 1px solid #000; */
         }
 
 
         .roboto {
             font-family: "Roboto", serif;
         }
+
+        .form-control {
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            color: #999 !important;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        }
+
+        ::placeholder {
+            color: #999 !important;
+        }
+
+        .opt-in {
+            font-size: 12px;
+            line-height: 15px;
+            color: #32425e;
+        }
+
+        .opt-in a {
+            text-decoration: none;
+        }
+
+        .btn {
+            background-color: #E0100E;
+            font-size: 18px;
+            font-weight: 600;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+        }
+
+        .btn:hover {
+            background-color: #E0100E;
+            box-shadow: 0 0 2px 2px #ccc;
+        }
     </style>
 </head>
 
-<body>
+<body style="background-color: #EBEBEB;">
 
     <!-- Navbar -->
     <nav>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-6 px-2 px-md-4 py-4 py-md-2 d-flex justify-content-start align-items-center">
                     <img src="./images/logo.png" width="90%" style="max-width: 250px;" alt="MARTECHSERIES">
                 </div>
-                <div class="col-md-6">
-                    <img src="./images/logo2.png" width="90%" style="max-width: 155px;" alt="ADOBE">
+                <div class="col-6 px-2 px-md-4 py-4 py-md-2 d-flex justify-content-end align-items-center">
+                    <img src="./images/logo2.png" width="90%" style="max-width: 220px;" alt="ADOBE">
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Title -->
-    <header>
+    <header style="background-color: #FC0F00;">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h1 class="">
-                        Access New Levels of Creative Freedom and Control With 3D-Powered Design
-                    </h1>
+                <div class="col-md-12 py-2">
+                    <h2 class="text-center text-white py-4 m-0" style="font-size: 27px;">
+                        <i>Access New Levels of Creative Freedom and Control With 3D-Powered Design</i>
+                    </h2>
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="m-3 mb-0 d-block" style="background-color: #FC0F00;height:2px;"></div>
 
     <!-- Abstract / Content / Form -->
     <main>
@@ -100,9 +138,9 @@
             <div class="row">
 
                 <!-- Content        -->
-                <section class="col-md-6">
+                <section class="col-md-6 col-lg-7 px-4 px-md-0 py-4">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 pt-4" style="font-size: 17px;line-height: 24px;">
                             <p>
                                 A product “shoot” without cameras. A dozen variations on a product design with just a
                                 few clicks
@@ -124,46 +162,50 @@
                         </div>
 
                         <div class="col-md-12">
-                            <img class="shadow" src="./images/thumb.png" width="90%" style="max-width: 500px;"
-                                alt="Thumbnail">
+                            <img class="d-block mx-auto" src="./images/thumb.png" width="100%" alt=" Thumbnail">
                         </div>
                     </div>
                 </section>
 
                 <!-- FORM -->
-                <section class="col-md-6">
+                <section class="col-md-6 col-lg-5 py-4">
                     <div class="row">
-                        <div class="col-12">
-                            <h2>
+
+                        <div class="col-10 col-xl-8 mx-auto me-lg-0 rounded-3 px-3 py-4"
+                            style="box-shadow: 1px 2px 14px 0px #fc0f00;">
+                            <h2 class="text-center pt-2" style="font-size: 18px;font-weight: 700;">
                                 Download Now
                             </h2>
-                        </div>
 
-                        <div class="col-12">
+                            <div class="m-3 d-block" style="background-color: #FC0F00;height:1px;"></div>
+
                             <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="First Name">
+                                <div class="col-md-12 my-2">
+                                    <input type="text" class="form-control" placeholder="First Name" name="First_Name">
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Last Name">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Business Email">
+                                <div class="col-md-12 my-2">
+                                    <input type="text" class="form-control" placeholder="Last Name" name="Last_Name">
                                 </div>
 
-                                <div class="col-md-6">
-                                    <input type="tel" class="form-control" placeholder="Phone Number">
+                                <div class="col-md-12 my-2">
+                                    <input type="email" class="form-control" placeholder="Business Email"
+                                        name="Business_Email">
                                 </div>
 
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" placeholder="Company Name">
+                                <div class="col-md-12 my-2">
+                                    <input type="tel" class="form-control" placeholder="Phone Number"
+                                        name="Phone_Number">
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-12 my-2">
+                                    <input type="text" class="form-control" placeholder="Company Name"
+                                        name="Company_Name">
+                                </div>
+
+                                <div class="col-md-12 my-2">
                                     <select class="form-control form-select" name="jtitle">
 
-                                        <option value="">Job Title*</option>
+                                        <option value="">Job Title *</option>
                                         <option value="CXO/EVP">CXO/EVP</option>
                                         <option value="SVP/VP">SVP/VP</option>
                                         <option value="Senior Director/Director">Senior Director/Director
@@ -186,7 +228,7 @@
                                     </select>
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-12 my-2">
                                     <select class="form-control form-select" name="jtitle">
 
                                         <option value="">--Company Size--</option>
@@ -200,7 +242,7 @@
                                     </select>
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-12 my-2">
                                     <select class="form-control form-select" name="industry">
 
                                         <option value="">Industry</option>
@@ -249,7 +291,7 @@
                                     </select>
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-12 my-2">
                                     <select class="form-control form-select" name="department">
 
                                         <option value="">Functional Area/Department</option>
@@ -306,15 +348,15 @@
                                     </select>
                                 </div>
 
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" placeholder="State">
+                                <div class="col-md-12 my-2">
+                                    <input type="text" class="form-control" placeholder="State" name="State">
                                 </div>
 
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" placeholder="Zip">
+                                <div class="col-md-12 my-2">
+                                    <input type="text" class="form-control" placeholder="Zip" name="Zip">
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-12 my-2">
                                     <select class="form-control form-select" name="country">
 
                                         <option value="">Country</option>
@@ -579,31 +621,29 @@
                                 </div>
 
 
-                                <div class="col-md-12">
+                                <div class="col-md-12 py-4 px-3">
                                     <!-- Optin -->
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="Yes" id="Optin" />
-                                        <label class="form-check-label" for="Optin">
-                                            The <a href="https://www.adobe.com/uk/privacy/policy.html#info-share">Adobe
-                                                family of
-                                                companies</a> would like to bring you great content like
-                                            this and keep you informed with <a
-                                                href="https://www.adobe.com/uk/privacy/marketing.html#mktg-email">personalized</a>
-                                            communications about Adobe’s products and services via email and
-                                            telephone. By submitting this form, you agree to receive these
-                                            communications at the email address and phone numbers you
-                                            provided. See our <a
-                                                href="https://www.adobe.com/uk/privacy/policy.html   ">Privacy
-                                                Policy</a> for more details or to <a
-                                                href="https://accounts.adobe.com/uk/">opt out</a> at any
-                                            time.
-                                        </label>
-                                    </div>
+                                    <label class="opt-in">
+                                        <input class="" type="checkbox" value="Yes" id="Optin" />
+                                        The <a href="https://www.adobe.com/uk/privacy/policy.html#info-share">Adobe
+                                            family of
+                                            companies</a> would like to bring you great content like
+                                        this and keep you informed with <a
+                                            href="https://www.adobe.com/uk/privacy/marketing.html#mktg-email">personalized</a>
+                                        communications about Adobe’s products and services via email and
+                                        telephone. By submitting this form, you agree to receive these
+                                        communications at the email address and phone numbers you
+                                        provided. See our <a
+                                            href="https://www.adobe.com/uk/privacy/policy.html   ">Privacy
+                                            Policy</a> for more details or to <a
+                                            href="https://accounts.adobe.com/uk/">opt out</a> at any
+                                        time.
+                                    </label>
 
                                 </div>
 
-                                <div class="col-md-12">
-                                    <input type="submit" class="btn" value="Download">
+                                <div class="col-md-12 py-3">
+                                    <input type="submit" class="btn d-block mx-auto px-4 py-2" value="Download">
                                 </div>
 
 
@@ -616,15 +656,16 @@
     </main>
 
     <!-- Footer / Privacy Policy -->
-    <footer>
+    <footer class="text-white" style="background-color: black;font-size: 14px;">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <p>
+                <div class="col-md-12 py-4">
+                    <p class="text-center">
                         3501, Jack Northrop Ave, Hawthorne, CA 90250.
                         <br>
-                        Copyright © 2022 Martech Series
-                        <br><br>
+                        Copyright © 2025 Martech Series
+                    </p>
+                    <p class="text-center">
                         Martech Series Privacy Policy
                     </p>
                 </div>
